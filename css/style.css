@@ -8,15 +8,15 @@
 }
 
 :root {
-    --primary: #00baf2;
-    --secondary: #95989a;
+    --primary: #E3AD1C;
+    --secondary: #2B1975;
     --text-color: #fff;
     --text-secondary: #000;
-    --text-tertiary: #5d5d5d;
+    --text-tertiary: #050336;
   }
 
 .event-subscription {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("image/berveee.jpg");
+	  background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0,0,0,0.70)), url(../image/background-3.jpg);
     background-position: center;
     background-size: cover;
     height: 85vh;
@@ -29,24 +29,25 @@
   .disclaimer .about-event {
     font-size: 2em;
     text-transform: uppercase;
-    max-width: 350px;
+    max-width: 500px;
     font-weight: bold;
     margin-bottom: 1em;
   }
   
   .disclaimer p {
-    font-size: 1.2em;
+    font-size: 1em;
     margin-bottom: 0.3em;
   }
   
   .subscription-form {
-    background-color: var(--secondary);
-    padding: 2em;
+    padding: 1.5em;
     max-width: 22%;
+    background-color:#fff;
+    border-radius: 0.5em;
   }
-  
+
   .subscription-form p {
-    font-size: 1.5em;
+    font-size: 1em;
     color: var(--text-secondary);
     margin-bottom: 1em;
   }
@@ -59,13 +60,18 @@
   
   .form-group label {
     color: #000;
+    font-size: 0.9em;
+    letter-spacing: 2px;
     margin-bottom: 0.3em;
     font-weight: bold;
   }
   
   .form-group input,
   .form-group select {
+    color:#fff;
+    font-size: 0.7em;
     padding: 6px 8px;
+    background-color: #050336;
     border-radius: 5px;
     border: none;
     outline: none;
@@ -73,7 +79,10 @@
   
   .btn {
     background-color: var(--primary);
-    color: #000;
+    color: rgb(255, 255, 255);
+    font-size: 0.6em;
+    letter-spacing: 2px;
+    border-radius: 5px;
     text-transform: uppercase;
     width: 100%;
     padding: 12px;
@@ -86,7 +95,7 @@
     opacity: 1;
   }
 
-.navbar{
+/* .navbar{
   position: fixed;
 	width: 100%;
 	height: 80px;
@@ -112,7 +121,7 @@
 .menu ul li a:hover{
 	border-bottom: 4px solid #000;
 	transition: 0.4s;
-} 
+} */
 
 .body{
 	width: 100%;
@@ -120,7 +129,7 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)), url(../image/los_angeles_front_2.jpg);
+	background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)), url(../image/background-1.jpg);
 	background-position: center;
 	background-size: cover;
 }
@@ -133,6 +142,10 @@
 
 .heading h1{
 	font-size: 50px;
+}
+
+.heading h2{
+	font-size: 45px;
 }
 
 .heading a{
@@ -192,6 +205,7 @@
 }
 
 .footer2{
+  background-color: #0f1a44;
 	width: 100%;
 	height: 80px;
 	display: flex;
@@ -200,10 +214,10 @@
 }
 
 .footer2 a{
+  width: 100%;
 	text-decoration: none;
-	color: #000;
-	font-size: 18px;
-	font-weight: bold;
+	color: #fff;
+	font-size: 0.7em;
 }
 
 .footer2 a:hover{
@@ -211,10 +225,16 @@
 	transition: 0.4s;
 }
 
+.footer2 p {
+	color: #fff;
+	font-size: 0.6em;
+  letter-spacing: 2px;
+}
+
 .footer {
     text-align: center;
-    background-color: #fee;
-    height: 250px;
+    background-color:#fff;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
