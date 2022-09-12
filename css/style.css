@@ -16,9 +16,8 @@
   }
   
 
-/** style para a "landing"
-    tudo que for em relacao 
-    a primeira pagina, coloque aqui
+/** style da div
+    landing
 **/
 
 .landing {
@@ -60,7 +59,8 @@
 /** ---------------------------------------------------------------------------------- **/
 
 /**
-
+  style da div 
+  event-subscription
 **/
 
 .event-subscription {
@@ -160,69 +160,19 @@ max-width: 100%;
 .tours {
   width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: space-around;
-  position: relative;
 }
 
-.tours {
-  width: 100%;
-	height: 100vh;
-	display: flex;
-	justify-content: space-around;
-  position: relative;
-
-.places {
-	display: inline;
-}
-
-.tours__img {
-  display: flex;
+.column {
+  float: left;
   width: 33.33%;
-  height: 50%;
 }
 
-/* .tours__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background:rgba(168, 123, 27, 0.702);
-  color: #fff;
-  display: flex; 
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
-.tours__overlay > * {
-  transform: translateY(20px);
-  transition: transform 0.25s;
-}
-
-.tours__overlay:hover {
-  opacity: 1;
-  transition: 0.25s;
-}
-
-.tours__overlay:hover > * {
-  transform: translateY(0px);
-} */
-
-.tours__title {
-  font-size: 1em;
-  font-weight: bold;
-  color: #fff;
-}
-
-.tours__description {
-  font-size: 0.9em;
-  font-weight: lighter;
-  color: #fff;
-  margin-top: 0.25em;
-}
 
 /** ---------------------------------------------------------------------------------- **/
 
