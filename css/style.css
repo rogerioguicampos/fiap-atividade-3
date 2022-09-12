@@ -165,14 +165,21 @@ max-width: 100%;
   position: relative;
 }
 
+.tours {
+  width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: space-around;
+  position: relative;
+
 .places {
 	display: inline;
-  
 }
 
 .tours__img {
   display: flex;
-  width: 100%;
+  width: 33.33%;
+  height: 50%;
 }
 
 /* .tours__overlay {
@@ -203,7 +210,6 @@ max-width: 100%;
 .tours__overlay:hover > * {
   transform: translateY(0px);
 } */
-
 
 .tours__title {
   font-size: 1em;
