@@ -1,5 +1,5 @@
 *{  
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 	padding: 0px;
 	margin: 0px;
 	box-sizing: border-box;
@@ -15,40 +15,76 @@
     --text-tertiary: #050336;
   }
   
-.body{
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: space-around;
+
+/** style da div
+    landing
+**/
+
+.landing {
   align-items: center;
   background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)), url(../image/background-1.jpg);
   background-position: center;
   background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100vh;
 }
+
+.landing .heading {
+  color: #fff;
+	text-align: center;
+  width: 30%;
+
+}
+
+.landing .heading h1 {
+  color: #E3AD1C;
+  font-size: 50px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.landing .heading h2 {
+  font-size: 50px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.landing .heading p {
+  text-transform: uppercase;
+}
+
+
+/** ---------------------------------------------------------------------------------- **/
+
+/**
+  style da div 
+  event-subscription
+**/
 
 .event-subscription {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0,0,0,0.70)), url(../image/background-3.jpg);
   background-position: center;
   background-size: cover;
-  height: 85vh;
+  height: 95vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: var(--text-color);
 }
 
-.disclaimer .about-event {
-  font-size: 2em;
-  text-transform: uppercase;
-  max-width: 500px;
+.disclaimer h1 {
+  color: #ffffff;
   font-weight: bold;
+  font-size: 2em;
   margin-bottom: 1em;
+  max-width: 800px;
   text-transform: uppercase;
-  color: #E3AD1C;
 }
 
 .disclaimer p {
-  font-size: 1em;
+  color: #fff;
+  font-size: 1.2em;
   margin-bottom: 0.3em;
 }
 
@@ -92,8 +128,8 @@ textarea {
 }
 
 textarea {
-  height: 40%;
-  max-width: 100%;
+height: 40%;
+max-width: 100%;
 }
 
 .btn {
@@ -114,134 +150,109 @@ textarea {
   opacity: 1;
 }
 
-.heading{
-	width: 30%;
-	text-align: center;
-	color: #fff;
-}
-
-.heading h1{
-	font-size: 50px;
-  color: #E3AD1C;
-  font-weight: 900;
-}
-
-.heading h2{
-	font-size: 50px;
-  font-weight: 200;
-
-}
-
-.places {
-	display: inline;
-  
-}
-
-.tours {
-  width: 100%;
-	height: 90vh;
-	display: flex;
-	justify-content: space-around;
-  position: relative;
-}
-
-.tours__img {
-  display: flex;
-  width: 100%;
-}
-
-.tours__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background:rgba(168, 123, 27, 0.702);
-  color: #fff;
-  display: flex; 
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-}
-
-.tours__overlay > * {
-  transform: translateY(20px);
-  transition: transform 0.25s;
-}
-
-.tours__overlay:hover {
-  opacity: 1;
-  transition: 0.25s;
-}
-
-.tours__overlay:hover > * {
-  transform: translateY(0px);
-}
-
-
-.tours__title {
-  font-size: 1em;
-  font-weight: bold;
-  color: #fff;
-}
-
-.tours__description {
-  font-size: 0.9em;
-  font-weight: lighter;
-  color: #fff;
-  margin-top: 0.25em;
-}
-
+/** ---------------------------------------------------------------------------------- **/
 
 
 /**
-.tours{
-	width: 100%;
-	height: 90vh;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)), url(../image/califa.jpg);
-	background-position: center;
-	background-size: cover;
-}
-
-.places {
-	display: inline;
-	text-align: center;
-	border-radius: 12px;
-}
-
-.places h2{
-	color: #fff;
-	font-size: 25px;
-	letter-spacing: 3px;
-	border-radius: 1px;
-	padding: 30px 30px;
-}
-
-.places a{
-	text-decoration: none;
-	color: #000;
-	font-weight: bold;
-	font-size: 18px;
-	border-radius: 12px;
-	padding: 12px 30px;
-	background-color: #fff;
-}
-
-.places a:hover{
-	background-color: #fff;
-	letter-spacing: 3px;
-	transition: 0.6s;
-}
+  style da div
+  tours
 **/
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+}
+
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-wrapper > img {
+  display: block; 
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+}
+
+.img-wrapper > .content{
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  inset: 0;
+  font-size: 2rem;
+  padding: 1rem;
+  background: #2B1975;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-wrapper > img,
+.img-wrapper > .content {
+  transition: 200ms ease-in-out;
+}
+
+.img-wrapper:hover > img.blur {
+  filter: blur(4x);
+}
+
+.img-wrapper > .content.fade {
+  opacity: 0;
+}
+.img-wrapper:hover > .content.fade {
+  opacity: 0.9;
+}
+
+.info {
+  width: 50%;
+  padding-left: 2em;
+  padding-right: 2em;
+  border: none;
+  cursor: pointer;
+  background-color: #E3AD1C;
+  border-radius: 5px;
+  font-style: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 0.8em;
+}
+
+
+.info:hover {
+  background-color: #050336;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+
+.img-wrapper .title{
+  color: #E3AD1C;
+  float: left;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding-left: 1em;
+}
+
+.img-wrapper p {
+  color: #fff;
+  float: left;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 2em;
+}
+
+/** ---------------------------------------------------------------------------------- **/
+
+
+/**
+**/
 .footer2{
-  background-color: #0f1a44;
+  background-color: #E3AD1C;
 	width: 100%;
-	height: 80px;
+	height: 50px;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -250,17 +261,19 @@ textarea {
 .footer2 a{
   width: 100%;
 	text-decoration: none;
-	color: #fff;
+	color: #050336;
 	font-size: 0.7em;
 }
 
 .footer2 a:hover{
+  font-weight: bold;
 	text-decoration: underline;
+  text-transform: uppercase;
 	transition: 0.4s;
 }
 
 .footer2 p {
-	color: #fff;
+	color: #050336;
 	font-size: 0.6em;
   letter-spacing: 2px;
 }
@@ -269,3 +282,5 @@ textarea {
   font-size: 1.8em;
   margin-bottom: 0.5em;
 }
+
+/** ---------------------------------------------------------------------------------- **/
